@@ -3,7 +3,6 @@ productName: Invoice Generator
 copyright: Copyright © 2021 Badar
 
 win:
-  icon: "resources/icon.ico"
   target:
     - "zip"
     - "nsis"
@@ -15,7 +14,6 @@ nsis:
 
 # Linux configuration
 linux:
-  icon: "resources/icon.ico"
   category: Development
   target:
     - "AppImage"
