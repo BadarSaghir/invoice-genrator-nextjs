@@ -1,0 +1,7 @@
+node_modules
+*.log
+.next
+app
+dist
+r/app-electron/node_modules
+r/node_modules
