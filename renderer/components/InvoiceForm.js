@@ -43,7 +43,7 @@ class InvoiceForm extends React.Component {
     ];
     this.editField = this.editField.bind(this);
   }
-  componentDidMount(prevProps) {
+  componentDidMount() {
     this.handleCalculateTotal();
   }
   handleRowDel(items) {
@@ -51,7 +51,7 @@ class InvoiceForm extends React.Component {
     this.state.items.splice(index, 1);
     this.setState(this.state.items);
   }
-  handleAddEvent(evt) {
+  handleAddEvent() {
     var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
     var items = {
       id: id,
@@ -137,7 +137,7 @@ class InvoiceForm extends React.Component {
     this.handleCalculateTotal();
     this.setState({ isOpen: true });
   };
-  closeModal = (event) => this.setState({ isOpen: false });
+  closeModal = () => this.setState({ isOpen: false });
   render() {
     return (
       <Form onSubmit={this.openModal}>

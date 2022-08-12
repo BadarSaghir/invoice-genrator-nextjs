@@ -66,11 +66,12 @@ export default function createWindow(windowName, options) {
 
   state = ensureVisibleOnSomeDisplay(restore());
  
-  
+// prod=true
 
   win = new BrowserWindow({
     ...options,
     ...state,
+    icon:prod?"app://./images/logo.png":`http://localhost:${process.argv[2]}/images/logo.png`,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
