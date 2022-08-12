@@ -69,7 +69,7 @@ export default function createWindow(windowName, options) {
   win = new BrowserWindow({
     ...options,
     ...state,
-    icon:"app://./favicon.ico",
+    icon:"files://./images/favicon.ico",
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

@@ -9,7 +9,7 @@ class App extends Component {
       <Container>
       <Head>
         
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/images/favicon.ico" />
         </Head>
         <InvoiceForm/>
       </Container>

@@ -147,7 +147,7 @@ class InvoiceForm extends React.Component {
               <div className="d-flex flex-row align-items-start justify-content-between mb-3">
                 <div class="d-flex flex-column">
                   <div className="d-flex flex-column">
-                    <div class="mb-2">
+                    <div className="mb-2">
                       <span className="fw-bold">Current&nbsp;Date:&nbsp;</span>
                       <span className="current-date">
                         {new Date().toLocaleDateString()}
