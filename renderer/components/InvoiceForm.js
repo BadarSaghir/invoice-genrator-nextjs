@@ -145,7 +145,7 @@ class InvoiceForm extends React.Component {
           <Col md={8} lg={9}>
             <Card className="p-4 p-xl-5 my-3 my-xl-4">
               <div className="d-flex flex-row align-items-start justify-content-between mb-3">
-                <div class="d-flex flex-column">
+                <div className="d-flex flex-column">
                   <div className="d-flex flex-column">
                     <div className="mb-2">
                       <span className="fw-bold">Current&nbsp;Date:&nbsp;</span>

@@ -9,8 +9,10 @@ class App extends Component {
       <Container>
       <Head>
         
-          <link rel="shortcut icon" href="/images/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />         
+       <title>Invoice Maker</title>
         </Head>
+        {/* <img src='/images/favicon.ico'/> */}
         <InvoiceForm/>
       </Container>
     </div>
