@@ -3,7 +3,7 @@ import {
   BrowserWindow,
 } from 'electron';
 import Store from 'electron-store';
-
+const prod=process.env.NODE_ENV === 'production'
 export default function createWindow(windowName, options) {
   const key = 'window-state';
   const name = `window-state-${windowName}`;
@@ -65,11 +65,12 @@ export default function createWindow(windowName, options) {
   };
 
   state = ensureVisibleOnSomeDisplay(restore());
+ 
+  
 
   win = new BrowserWindow({
     ...options,
     ...state,
-    icon:"files://./images/favicon.ico",
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

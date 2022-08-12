@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "invoice-maker",
+  "name": "invoice",
   "description": "Invoice Genratir",
   "version": "1.0.0",
   "author": "Badar <badardani11@gmail.com>",
