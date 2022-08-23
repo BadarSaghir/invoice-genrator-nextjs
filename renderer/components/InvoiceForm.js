@@ -73,7 +73,7 @@ class InvoiceForm extends React.Component {
       console.info("71.loop i, subTotal:",i,',',subTotal)
     });
     
-    subTotal=subTotal.toPrecision(4)
+    subTotal=subTotal.toFixed(2)
     console.info("77.handleCalculations :",subTotal)
     console.info("78. item",items)
     this.setState(
@@ -271,7 +271,7 @@ class InvoiceForm extends React.Component {
                     <span className="fw-bold">Total:</span>
                     <span className="fw-bold">
                       {this.state.currency}
-                      {this.state.total || 0}
+                      {(this.state.total*1).toFixed(2) || 0}
                     </span>
                   </div>
                 </Col>
