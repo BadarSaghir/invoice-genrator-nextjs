@@ -64,18 +64,18 @@ class InvoiceForm extends React.Component {
     this.setState(this.state.items);
   }
   handleCalculateTotal() {
-    var items = this.state.items;
+    
     var subTotal = 0;
     var i=0;
     this.state.items.map(function (itm) {
       i=i+1;
       subTotal = subTotal + itm.price * itm.quantity;
-      console.info("71.loop i, subTotal:",i,',',subTotal)
+      // console.info("71.loop i, subTotal:",i,',',subTotal)
     });
     
     subTotal=subTotal.toFixed(2)
-    console.info("77.handleCalculations :",subTotal)
-    console.info("78. item",items)
+    // console.info("77.handleCalculations :",subTotal)
+    // console.info("78. item",items)
     this.setState(
       {
         subTotal:subTotal
@@ -115,7 +115,7 @@ class InvoiceForm extends React.Component {
       value: evt.target.value,
     };
     var items = this.state.items.slice();
-  console.info("item on item edit:",evt.target.value)
+  // console.info("item on item edit:",evt.target.value)
     var newItems = items.map(function (items) {
       for (var key in items) {
         if (key == item.name && items.id == item.id) {
