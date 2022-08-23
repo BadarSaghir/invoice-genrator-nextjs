@@ -50,6 +50,7 @@ class InvoiceForm extends React.Component {
     var index = this.state.items.indexOf(items);
     this.state.items.splice(index, 1);
     this.setState(this.state.items);
+    this.handleCalculateTotal();
   }
   handleAddEvent() {
     var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
