@@ -55,10 +55,16 @@ class ItemRow extends React.Component {
           
           placeholder='Item Name' 
           options={itemName}
+          onInputChange={(e)=>{this.props.item.name=e}}
 
           name= "name"
           value={this.props.item.name}
           onChange={(selected)=>this.props.item.name=selected}
+          
+          
+        
+        
+        
           id={this.props.item.id}
           maxResults={7}
           
