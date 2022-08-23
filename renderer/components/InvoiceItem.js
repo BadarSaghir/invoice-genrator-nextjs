@@ -52,6 +52,7 @@ class ItemRow extends React.Component {
       <tr>
 
         <td style={{width: '100%'}}>
+          
           <Typeahead 
           
           placeholder='Item Name' 
@@ -66,7 +67,10 @@ class ItemRow extends React.Component {
          
           paginate={false}
           minLength={1}
+          inputProps={{required:true}}
           />
+          
+        
         <div style={{display:"none"}}>
           <EditableField
           
