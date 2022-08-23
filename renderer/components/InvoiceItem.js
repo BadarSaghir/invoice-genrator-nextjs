@@ -49,14 +49,22 @@ class ItemRow extends React.Component {
    
     return (
       <tr>
+
         <td style={{width: '100%'}}>
           <Typeahead 
+          
           placeholder='Item Name' 
           options={itemName}
+
           name= "name"
           value={this.props.item.name}
           onChange={(selected)=>this.props.item.name=selected}
           id={this.props.item.id}
+          maxResults={7}
+          
+          
+          paginate={false}
+          minLength={1}
           />
           {/* <EditableField
             onItemizedItemEdit={this.props.onItemizedItemEdit}
