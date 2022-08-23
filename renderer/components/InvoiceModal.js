@@ -111,7 +111,7 @@ class InvoiceModal extends React.Component {
                           {this.props.currency} {item.price}
                         </td>
                         <td className="text-end" style={{ width: "100px" }}>
-                          {this.props.currency} {item.price * item.quantity}
+                          {this.props.currency} {(item.price * item.quantity).toFixed(2)}
                         </td>
                       </tr>
                     );
