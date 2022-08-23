@@ -5,6 +5,7 @@ body, html {
 body, .form-control {
   font-size: 0.9rem
 }
+
 body,
 html,
 #root,
@@ -85,4 +86,24 @@ hr {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media print {
+  #printPageButton {
+    display: none;
+    visibility: hidden;
+  }
+  button {
+    display: none;
+    visibility: hidden
+  }
+  #form {
+    display: none;
+    visibility: hidden
+  }
+  #modal{
+    width: 99vw;
+    height: 99vh;
+
+  }
 }

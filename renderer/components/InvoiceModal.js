@@ -35,8 +35,8 @@ class InvoiceModal extends React.Component {
 
   render() {
     return (
-      <div>
-        <Modal
+      <div >
+        <Modal 
           // ref={componentRef}
           show={this.props.showModal}
           onHide={this.props.closeModal}
@@ -179,7 +179,8 @@ class InvoiceModal extends React.Component {
           <div className="pb-4 px-4">
             <Row>
               <Col md={6}>
-                <Button
+                <Button 
+                id="printPageButton"
                   variant="primary"
                   className="d-block w-100"
                   onClick={GenerateInvoice}
@@ -193,6 +194,7 @@ class InvoiceModal extends React.Component {
               </Col>
               <Col md={6}>
                 <Button
+                id="printPageButton"
                   variant="outline-primary"
                   className="d-block w-100 mt-3 mt-md-0"
                   type="submit"
