@@ -5,7 +5,8 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { BiTrash } from "react-icons/bi";
 import EditableField from './EditableField';
-
+import { Typeahead } from 'react-bootstrap-typeahead';
+import {itemName} from '../data/list';
 class InvoiceItem extends React.Component {
   render() {
     var onItemizedItemEdit = this.props.onItemizedItemEdit;
@@ -39,22 +40,35 @@ class InvoiceItem extends React.Component {
 
 }
 class ItemRow extends React.Component {
+
   onDelEvent() {
     this.props.onDelEvent(this.props.item);
+
   }
   render() {
+   
     return (
       <tr>
         <td style={{width: '100%'}}>
-          <EditableField
+          <Typeahead 
+          placeholder='Item Name' 
+          options={itemName}
+          name= "name"
+          value={this.props.item.name}
+          onChange={this.props.onItemizedItemEdit}
+          id={this.props.item.id}
+          />
+          {/* <EditableField
             onItemizedItemEdit={this.props.onItemizedItemEdit}
+            
             cellData={{
             type: "text",
             name: "name",
             placeholder: "Item name",
+          
             value: this.props.item.name,
             id: this.props.item.id,
-          }}/>
+          }}/> */}
           <EditableField
             onItemizedItemEdit={this.props.onItemizedItemEdit}
             cellData={{
