@@ -61,19 +61,15 @@ class ItemRow extends React.Component {
           name= "name"
           value={this.props.item.name}
           onChange={(selected)=>this.props.item.name=selected}
-          
-          
-        
-        
-        
           id={this.props.item.id}
           maxResults={7}
-          
-          
+         
           paginate={false}
           minLength={1}
           />
-          {/* <EditableField
+        <div style={{display:"none"}}>
+          <EditableField
+          
             onItemizedItemEdit={this.props.onItemizedItemEdit}
             
             cellData={{
@@ -83,7 +79,8 @@ class ItemRow extends React.Component {
           
             value: this.props.item.name,
             id: this.props.item.id,
-          }}/> */}
+          }}/>
+          </div>
           <EditableField
             onItemizedItemEdit={this.props.onItemizedItemEdit}
             cellData={{
