@@ -55,7 +55,7 @@ class ItemRow extends React.Component {
           options={itemName}
           name= "name"
           value={this.props.item.name}
-          onChange={this.props.onItemizedItemEdit}
+          onChange={(selected)=>this.props.item.name=selected}
           id={this.props.item.id}
           />
           {/* <EditableField

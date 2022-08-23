@@ -107,9 +107,9 @@ class InvoiceForm extends React.Component {
   }
   onItemizedItemEdit(evt) {
     var item = {
-      id: evt.target?.id,
-      name: evt.target?.name,
-      value: evt.target?.value,
+      id: evt.target.id,
+      name: evt.target.name,
+      value: evt.target.value,
     };
     var items = this.state.items.slice();
     var newItems = items.map(function (items) {
