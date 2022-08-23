@@ -7,6 +7,7 @@ import { BiTrash } from "react-icons/bi";
 import EditableField from './EditableField';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import {itemName} from '../data/list';
+React.useLayoutEffect = React.useEffect 
 class InvoiceItem extends React.Component {
   render() {
     var onItemizedItemEdit = this.props.onItemizedItemEdit;
