@@ -6,3 +6,4 @@ dist
 r/app-electron/node_modules
 r/node_modules
 win32
+win64
