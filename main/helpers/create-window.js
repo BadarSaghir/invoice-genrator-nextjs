@@ -3,7 +3,6 @@ import {
   BrowserWindow,
 } from 'electron';
 import Store from 'electron-store';
-const prod=process.env.NODE_ENV === 'production'
 export default function createWindow(windowName, options) {
   const key = 'window-state';
   const name = `window-state-${windowName}`;
@@ -71,8 +70,9 @@ export default function createWindow(windowName, options) {
   win = new BrowserWindow({
     ...options,
     ...state,
-    icon:prod?"app://./images/logo.png":`http://localhost:${process.argv[2]}/images/logo.png`,
+    icon:__dirname+"/icon.png",
     webPreferences: {
+      webSecurity: false,
       nodeIntegration: true,
       contextIsolation: false,
       ...options.webPreferences,
@@ -84,4 +84,4 @@ export default function createWindow(windowName, options) {
   win.maximize();
   win.show();
   return win;
-};
+}
